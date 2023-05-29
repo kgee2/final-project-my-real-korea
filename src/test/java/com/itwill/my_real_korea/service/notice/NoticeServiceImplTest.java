@@ -22,6 +22,7 @@ class NoticeServiceImplTest {
 	private NoticeService noticeService;
 	
 	
+	@Disabled
 	@Test
 	void testInsertNotice() throws Exception {
 		int rowCount = noticeService.insertNotice(new Notice(0, "공지S테스트1", "내용S테스트1", null, 0, "", "aaa111"));

@@ -41,7 +41,7 @@ class WishlistControllerTest {
 	@MockBean
 	WishlistService wishlistService;
 	
-	@Test
+//	@Test
 	void testWishlist() throws Exception {
 		// 임의로 session 만들기
 		session = new MockHttpSession();

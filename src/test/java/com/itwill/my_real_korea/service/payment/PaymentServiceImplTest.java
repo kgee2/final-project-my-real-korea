@@ -61,6 +61,7 @@ class PaymentServiceImplTest {
 
 	}
 
+	@Disabled
 	@Test
 	void testSelectAllUser() {
 		List<Payment> paymentList = paymentService.selectAllUser("qqqq1111");

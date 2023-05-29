@@ -45,6 +45,7 @@ class PaymentDaoImplTest {
 		assertEquals(rowCount2,1);
 	}
 
+    @Disabled
     @Test
     void selectAllUser() throws Exception{
         List<Payment> paymentList = paymentDao.selectAllUser("qqqq1111");

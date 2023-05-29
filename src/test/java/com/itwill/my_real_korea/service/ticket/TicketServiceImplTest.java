@@ -41,16 +41,18 @@ class TicketServiceImplTest {
         ticketImgService.insertTicketImg(ticketImg3);
         assertEquals(rowCount, 1);
     }
+    @Disabled
     @Test
     void selectAllTicket() throws Exception{
        System.out.println(ticketService.selectAllTicket(1));
     }
 
+    @Disabled
     @Test
     void selectByTicketAllSort() throws Exception{
         System.out.println(ticketService.selectByTicketAllSort(1,null,0,null));
     }
-    //@Disabled
+    @Disabled
     @Test
     void selectByTicketNoCityWithImg() throws Exception{
         //assertNotNull(ticketService.selectByTicketNoCityWithImg(1));

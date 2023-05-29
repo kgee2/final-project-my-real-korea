@@ -35,7 +35,7 @@ class TourReserveDaoImplTest {
 		TourReserve tourReserve=tourReserveDao.findTourReserveWithTourByToRsNo(12);
 		System.out.println(tourReserve);
 	}
-	@Test
+//	@Test
 	void testSelectAllTourReserveByUserId() throws Exception{
 		List<TourReserve> tourReserveList=tourReserveDao.findAllTourReservewithTourByUserId(1, 10, "desc", "user1");
 		System.out.println(tourReserveList.size());

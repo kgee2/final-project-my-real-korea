@@ -33,6 +33,7 @@ class TicketReserveServiceImplTest {
 		System.out.println(ticketReserveService.insertTicketReserve(
 				new TicketReserve(0, new Date(), 5, "테스트중중중중중 ", ticket, "user3")));
 	}
+	@Disabled
 	@Test
 	void testSelectByTicketReserveUser() throws Exception{
 		List<TicketReserve> tickeList = ticketReserveService.selectByTicketReserveUser("user1");

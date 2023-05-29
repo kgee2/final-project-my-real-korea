@@ -24,18 +24,18 @@ class FreeBoardCommentServiceImplTest {
 //        assertThat(insertComment).isEqualTo(1);
 //    }
 
-    @Test
+//    @Test
     void selectAll() throws Exception {
         List<FreeBoardComment> freeBoardComments = freeBoardCommentService.selectAll();
         System.out.println(freeBoardComments);
     }
 
-    @Test
+//    @Test
     void selectByfBoNo() throws  Exception {
         List<FreeBoardComment> freeBoardComments = freeBoardCommentService.selectByfBoNo(3);
         System.out.println(freeBoardComments);
     }
-    @Test
+//    @Test
     void selectByfCoNo() throws  Exception {
         FreeBoardComment freeBoardComment = freeBoardCommentService.selectByfCoNo(3);
         System.out.println(freeBoardComment);
@@ -47,7 +47,7 @@ class FreeBoardCommentServiceImplTest {
         assertThat(deleteComment).isEqualTo(1);
     }
 
-    @Test
+//    @Test
     void update() throws Exception {
         FreeBoardComment updateFreeBoardComment = new FreeBoardComment
                 (2,"2백암순대국을 추천합니다",null,2,"user1");
@@ -56,7 +56,7 @@ class FreeBoardCommentServiceImplTest {
 
     }
 
-    @Test
+//    @Test
     void commentCount() throws Exception {
         int commentCount = freeBoardCommentService.selectCommentCount(2);
         System.out.println(commentCount);

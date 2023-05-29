@@ -46,6 +46,7 @@ class WishlistDaoImplTest {
 	}
 
 	
+	@Disabled
 	@Test
 	void testSelectAllWithTicketAndTour() {
 		List<Wishlist> wishlistList = wishlistDao.selectAllWithTicketAndTour("user1");

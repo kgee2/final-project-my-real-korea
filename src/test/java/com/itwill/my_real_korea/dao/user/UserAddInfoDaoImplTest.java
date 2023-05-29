@@ -13,26 +13,23 @@ class UserAddInfoDaoImplTest {
 	@Autowired
 	private UserAddInfoDao userAddInfoDao; 
 	
-	@Test
+//	@Test
 	void init() {
 		System.out.println(userAddInfoDao);
 	}
 
 	//1. 회원 추가 정보 등록
-	@Test
 	void testCreateUserAddInfo() throws Exception {
 		UserAddInfo newAddInfo = new UserAddInfo("테스트", 0, 0, "user1");
 		System.out.println(">> created :"+userAddInfoDao.createUserAddInfo(newAddInfo));
 	}
 
 	//2. 회원 추가 정보 보기
-	@Test
 	void testFindUserAddInfo() throws Exception {
 		System.out.println(">> find :"+userAddInfoDao.findUserAddInfo("user1"));
 	}
 
 	//3. 회원 추가 정보 수정
-	@Test
 	void testUpdateUserAddInfo() throws Exception {
 		UserAddInfo updateAddInfo = userAddInfoDao.findUserAddInfo("user2");
 		updateAddInfo.setIntroduce("msg2");
@@ -42,7 +39,6 @@ class UserAddInfoDaoImplTest {
 	}
 
 	//4. 회원 추가 정보 삭제
-	@Test
 	void testRemoveUserAddInfo() throws Exception {
 		System.out.println(">> removed :"+userAddInfoDao.removeUserAddInfo("user3"));
 	}

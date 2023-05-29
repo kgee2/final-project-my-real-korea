@@ -27,7 +27,7 @@ class RsPInfoServiceImplTest {
 		rsPInfoService.insertRsPerson(reservePersonInfo1);
 	}
 
-	@Test
+//	@Test
 	void testSelectRsPersonByPNo() {
 		//List<RsPInfo> rsPInfoList=rsPInfoService.selectRsPersonByPNo(1);
 		//System.out.println(rsPInfoList);

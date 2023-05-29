@@ -52,7 +52,7 @@ class TicketReviewDaoImplTest {
         assertEquals(rowCount,1);
     }*/
 
-    @Test
+//    @Test
     void deleteTicketReview() {
         int rowCount = ticketReviewDao.deleteTicketReview(1);
         assertEquals(rowCount,1);

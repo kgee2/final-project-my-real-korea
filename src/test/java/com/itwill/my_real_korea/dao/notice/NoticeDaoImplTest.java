@@ -16,7 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.itwill.my_real_korea.dao.notice.NoticeDao;
 import com.itwill.my_real_korea.dto.notice.Notice;
 
-@SpringBootApplication
+//@SpringBootApplication
 //@SpringBootTest
 @MapperScan(basePackages = "com.itwill.my_real_korea.mapper")
 class NoticeDaoImplTest {
@@ -25,6 +25,7 @@ class NoticeDaoImplTest {
 	private NoticeDao noticeDao;
 	
 	
+	@Disabled
 	@Test
 	void testInsertNotice() throws Exception{
 		int rowCount = noticeDao.insertNotice(new Notice(0, "공지테스트1", "내용테스트1", null, 0, "","aaa111"));

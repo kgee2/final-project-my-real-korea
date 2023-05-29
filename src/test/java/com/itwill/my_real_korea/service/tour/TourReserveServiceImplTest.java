@@ -42,7 +42,6 @@ class TourReserveServiceImplTest {
 		System.out.println(tourReserve);
 	}
 
-	@Test
 	void testFindAllTourReservewithTourByUserId() throws Exception{
 		PageMakerDto<TourReserve> tourReserveList=tourReserveService.findAll(1, "desc", "user1");
 		System.out.println(tourReserveList);

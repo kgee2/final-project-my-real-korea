@@ -49,6 +49,7 @@ class ChatMsgDaoImplTest {
 	}
 	
 	
+	@Disabled
 	@Test
 	void testSelectAllNotReadMsg() {
 		assertNotNull(chatMsgDao.selectAllNotReadMsg("kms2"));

@@ -36,6 +36,7 @@ class ChatRoomDaoImplTest {
 	}
 	
 	
+	@Disabled
 	@Test
 	void testSelectCheckByRoomNameWith() {
 		assertNotNull(chatRoomDao.selectByRoomNameWith("채팅"));

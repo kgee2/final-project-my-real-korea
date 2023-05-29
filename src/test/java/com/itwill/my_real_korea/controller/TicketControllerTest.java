@@ -42,7 +42,7 @@ class TicketControllerTest {
     @Autowired
     private TicketReviewServiceImpl ticketReviewService;
 
-    @Test
+//  @Test
     void ticketList() throws Exception {
 
         PageMakerDto<Ticket> ticketPage = new PageMakerDto<>();

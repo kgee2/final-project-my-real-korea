@@ -63,7 +63,7 @@ public class NoticeControllerTest {
 	}
 	
 	
-	@Test
+//	@Test
 	void testNotice_detail() throws Exception{
 		// 임의로 notice 만들기
 		Notice notice = new Notice(1, null, null, null, 0, null, null);

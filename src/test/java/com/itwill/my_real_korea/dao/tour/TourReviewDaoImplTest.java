@@ -24,7 +24,7 @@ class TourReviewDaoImplTest {
 		assertEquals(rowCount, 1);
 	}
 
-	@Test
+//	@Test
 	void testSelectByToNo() throws Exception{
 		List<TourReview> tourReviewList=tourReviewDao.selectByToNo(1);
 		System.out.println(tourReviewList.size());

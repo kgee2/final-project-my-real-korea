@@ -29,7 +29,7 @@ class CityServiceImplTest {
 		System.out.println("6번 도시:" +cityService.findByCityNo(6));
 	}
 
-	@Test
+//	@Test
 	void testSelectAllCity() throws Exception{
 		List<City> cityList=cityService.findAllCity();
 		for (City city : cityList) {

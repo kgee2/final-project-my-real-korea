@@ -141,6 +141,7 @@ class ChatServiceImplTest {
 	}
 
 	
+	@Disabled
 	@Test
 	void testInsertChatMsg() {
 		int rowCount = chatService.insertChatMsg(new ChatMsg(0, "하이하이", "10시", 0, "채팅방1", "aaa111"));

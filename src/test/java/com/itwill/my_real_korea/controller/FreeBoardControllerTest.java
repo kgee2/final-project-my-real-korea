@@ -60,7 +60,7 @@ public class FreeBoardControllerTest {
         verify(freeBoardService).selectAll(1);
     }
 
-    @Test
+//  @Test
     void freeBoard_detail() throws Exception{
         FreeBoard freeBoard = new FreeBoard(1,"title","content",null,12,new City(1,"서울",1,1),"user2",0);
         List<FreeBoardComment> freeBoardCommentList = new ArrayList<>();

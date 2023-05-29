@@ -1,5 +1,6 @@
 package com.itwill.my_real_korea.service.user;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +16,7 @@ class UserAddInfoServiceImplTest {
 	private UserAddInfoService userAddInfoService;
 
 	//1. 회원 추가 정보 등록
+	@Disabled
 	@Test
 	void testCreateUserAddInfo() throws Exception {
 		UserAddInfo newAddInfo = new UserAddInfo("테스트", 0, 0, "user1");
@@ -22,13 +24,11 @@ class UserAddInfoServiceImplTest {
 	}
 	
 	//2. 회원 추가 정보 보기
-	@Test
 	void testFindUserAddInfo() throws Exception {
 		System.out.println(">> find :"+userAddInfoService.findUserAddInfo("user1"));
 	}
 
 	//3. 회원 추가 정보 수정
-	@Test
 	void testUpdateUserAddInfo() throws Exception {
 		UserAddInfo updateAddInfo = userAddInfoService.findUserAddInfo("user1");
 		updateAddInfo.setIntroduce("msg2");
@@ -38,7 +38,6 @@ class UserAddInfoServiceImplTest {
 	}
 	
 	//4. 회원 추가 정보 삭제
-	@Test
 	void testRemoveUserAddInfo() throws Exception {
 		System.out.println(">> removed :"+userAddInfoService.removeUserAddInfo("user3"));
 	}

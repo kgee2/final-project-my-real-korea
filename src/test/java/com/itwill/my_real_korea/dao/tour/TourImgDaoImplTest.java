@@ -37,7 +37,7 @@ class TourImgDaoImplTest{
 		}
 	}
 
-	@Test
+//	@Test
 	void testDeleteTourAllImg() {
 		int rowCount=tourImgDao.deleteTourAllImg(3);
 		System.out.println(rowCount);

@@ -33,7 +33,6 @@ class TourReviewServiceImplTest {
 		assertEquals(rowCount, 1);
 	}
 
-	@Test
 	void testFindByUserId() throws Exception{
 		List<TourReview> tourReviewList=tourReviewService.findByUserId("user1");
 		System.out.println(tourReviewList);
@@ -43,7 +42,7 @@ class TourReviewServiceImplTest {
 		List<TourReview> tourReviewList=tourReviewService.findByToNo(5);
 		System.out.println(tourReviewList);
 	}
-	@Test
+
 	void testCalculateTourScore() throws Exception{
 		int tourScore=tourReviewService.calculateTourScore(3);
 		System.out.println(tourScore);

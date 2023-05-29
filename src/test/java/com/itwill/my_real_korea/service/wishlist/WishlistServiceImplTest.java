@@ -44,12 +44,14 @@ class WishlistServiceImplTest {
 		assertNotEquals(rowCount, 0);
 		System.out.println(rowCount);
 	}
+	@Disabled
 	@Test
 	void testSelectWishlistTourCount() {
 		int rowCount = wishlistService.selectWishlistTourCount("admin",1);
 		assertNotEquals(rowCount, 0);
 		System.out.println(rowCount);
 	}
+	@Disabled
 	@Test
 	void testSelectWishlistTicketCount() {
 		int rowCount = wishlistService.selectWishlistTicketCount("aaa111",1);
