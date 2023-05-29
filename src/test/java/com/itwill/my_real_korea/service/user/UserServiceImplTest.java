@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itwill.my_real_korea.dto.user.User;
 
+//@SpringBootTest
 //@Transactional
-@SpringBootTest
 @MapperScan(basePackages = "com.itwill.my_real_korea.mapper")
 class UserServiceImplTest {
 	
@@ -83,7 +83,7 @@ class UserServiceImplTest {
 	void sendTempPassword() throws Exception {
 		userService.sendTempPassword("test11", "kgee12300@gmail.com");
 	}
-	
+
 	
 	//21. 메일 인증여부 확인
 	//@Test

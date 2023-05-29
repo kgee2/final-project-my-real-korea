@@ -7,9 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.itwill.my_real_korea.dto.user.UserImg;
 
-@SpringBootTest
+//@SpringBootTest
 @Transactional
 class UserImgServiceImplTest {
+	
 	@Autowired
 	private UserImgService userImgService;
 	

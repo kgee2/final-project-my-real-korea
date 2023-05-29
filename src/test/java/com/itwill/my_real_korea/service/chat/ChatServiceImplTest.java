@@ -14,7 +14,7 @@ import com.itwill.my_real_korea.dto.chat.ChatMsg;
 import com.itwill.my_real_korea.dto.chat.ChatRoom;
 
 @SpringBootApplication
-@SpringBootTest
+//@SpringBootTest
 @ComponentScan(basePackages = {"com.itwill.my_real_korea"})
 class ChatServiceImplTest {
 

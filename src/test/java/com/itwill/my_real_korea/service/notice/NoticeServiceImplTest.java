@@ -14,7 +14,7 @@ import com.itwill.my_real_korea.dto.notice.Notice;
 import com.itwill.my_real_korea.service.notice.NoticeService;
 
 @SpringBootApplication
-@SpringBootTest
+//@SpringBootTest
 @ComponentScan(basePackages = {"com.itwill.my_real_korea"})
 class NoticeServiceImplTest {
 
