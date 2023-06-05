@@ -77,7 +77,7 @@
             </tr>            
             <tr>
                 <th>Handlebars.js</th>
-                <th></th>
+                <th>문법이 간단하고 단순한 데이터 바인딩 작업에 효과적이라는 장점때문에 채택했습니다.</th>
             </tr>            
             <tr>
                 <th>Ajax</th>
@@ -103,38 +103,49 @@ Mybatis 2.3.0
 
 # 주요 기능
 ## 회원
-<div>
-<ul>
-    <li>
-        <h4>회원 가입 - 아이디 유효성 검사</h4>
-        <img src="https://github.com/kgee2/kgee2/assets/117699823/58fea386-c88d-46db-804a-fabe16e85e7a">
-    </li>
-    <li>
-        <h4>회원 가입 - 비밀번호 유효성 검사</h4>
-        <img src="https://github.com/kgee2/kgee2/assets/117699823/9813355e-2266-4970-83ff-e0323349170e">
-    </li>
-    <li>
-        <h4>회원 가입 - 주소 찾기</h4>
-        <img src="https://github.com/kgee2/kgee2/assets/117699823/5ad11e68-79c7-448f-9279-922b868dc481">
-    </li>
-    <li>
-        <h4>로그인 - 이메일 인증</h4>
-        <img src="https://github.com/kgee2/kgee2/assets/117699823/fd4617df-8ce7-4e51-8e32-d1bea2871e96">
-    </li>
-    <li>
-        <h4>로그인 - 비밀번호 찾기</h4>
-        <img src="https://github.com/kgee2/kgee2/assets/117699823/5a07b824-4135-46ee-94c4-e1abe810cd8c">
-    </li>
-    <li>
-        <h4>로그인 - 카카오 로그인</h4>
-        <img src="">
-    </li>
-    <li>
-        <h4>회원 정보 - 프로필 사진 업로드</h4>
-        <img src="">
-    </li>
-    <li>
-        <h4>회원 정보 - 관리자 페이지</h4>
-        <img src="">
-    </li>
-</div>
+
+- 회원 가입 - 아이디 유효성 검사
+  
+  ![join_id](https://github.com/kgee2/my-real-korea/assets/117699823/f1852ad4-080d-42f5-a7ac-fd3ef410b646)
+
+- 회원 가입 - 비밀번호 유효성 검사
+  
+    ![join_pw](https://github.com/kgee2/kgee2/assets/117699823/9813355e-2266-4970-83ff-e0323349170e)
+
+- 회원 가입 - 주소 찾기
+  
+  Daum 주소 API
+
+    ![join_add](https://github.com/kgee2/kgee2/assets/117699823/5ad11e68-79c7-448f-9279-922b868dc481)
+
+- 로그인 - 이메일 인증
+  
+  Java Mail API
+    ![login_auth](https://github.com/kgee2/kgee2/assets/117699823/fd4617df-8ce7-4e51-8e32-d1bea2871e96)
+
+- 로그인 - 비밀번호 찾기
+
+    - 복호화가 불가능한 bCryptPasswordEncoder 때문에 원래의 비밀번호를 찾을 수 없기 때문에 임시 비밀번호 생성
+    - 아이디와 이메일이 일치하는 회원의 이메일로 임시 비밀번호 발송
+
+
+    ![find_pw](https://github.com/kgee2/kgee2/assets/117699823/5a07b824-4135-46ee-94c4-e1abe810cd8c)
+
+- 로그인 - 카카오 로그인
+
+    카카오 로그인 API
+    - 카카오 계정으로 가입한 회원의 아이디는 K_ + 카카오 프로필에서 가져온 ID (10자리 숫자)의 조합
+    - 데이터베이스에 등록되어 있지 않은 아이디라면 회원 가입, 등록되어 있는 아이디라면 로그인
+    - 이메일 주소, 닉네임, 성별을 수집하여 회원 데이터베이스에 등록 
+  
+  ![login_kakao](https://github.com/kgee2/kgee2/assets/117699823/c2d17beb-d68f-4187-b230-24e6f15cb71c) 
+    
+- 회원 정보 - 프로필 사진 업로드   
+    - MultipartResolver를 사용하여 파일 업로드
+    - UUID 를 사용하여 파일 이름 변경 후 directory에 저장 
+     
+   ![mypage_upload](https://github.com/kgee2/kgee2/assets/117699823/d4158a69-e572-4045-860f-8ae916781b70)
+
+- 회원 정보 - 관리자 페이지
+    ![mypage_admin](https://github.com/kgee2/kgee2/assets/117699823/45d31250-73bb-4c14-9bbc-2cbfa38c0029)
+
