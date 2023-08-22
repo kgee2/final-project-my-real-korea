@@ -7,19 +7,12 @@
 </div>        
 <br>
 
-
 # 프로젝트 개요
 <div>
     <h3>참여 인원</h3>
     <p>9명</p>   
     <h3>프로젝트 기간</h3>
     <p>2023.03.27 - 2023.04.28</p>   
-</div>
-<br>
-
-# 개발 목적
-<div>
-국내 여행 ~~
 </div>
 <br>
 
@@ -52,78 +45,102 @@
 </div>
 <br>
 
-# 선정 이유
-
 <div>
     <table>
         <thead>
             <tr>
-                <th>기술</th>
-                <th>선정 이유</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Java 1.8</th>
-                <th>오랫동안 지원받을 수 있는 LTS 버전이며, 이전 버전의 Java 코드와 라이브러리를 이용하여 작업할 때 호환성 문제가 발생할 가능성이 낮아서 1.8 버전을 채택했습니다.</th>
+                <th>Language</th>
+                <th>Java 1.8, JavaScript, HTML/CSS </th>
             </tr>
             <tr>
-                <th>SpringBoot 2.7.10</th>
-                <th>내장 서버를 지원하여 서버 구축하는 시간을 단축할 수 있으며, 의존성 관리를 자동화하여 필요한 라이브러리를 쉽게 가져올 수 있어서 채택했습니다.</th>
+                <th>Server</th>
+                <th>Apache Tomcat 9.0.73</th>
             </tr>
             <tr>
-                <th>Thymeleaf</th>
-                <th></th>
+                <th>Framework</th>
+                <th>SpringBoot, MyBatis 2.3.0, BootStrap5</th>
             </tr>            
             <tr>
-                <th>Handlebars.js</th>
-                <th>문법이 간단하고 단순한 데이터 바인딩 작업에 효과적이라는 장점때문에 채택했습니다.</th>
+                <th>DB</th>
+                <th>Oracle</th>
             </tr>            
             <tr>
-                <th>Ajax</th>
-                <th></th>
+                <th>IDE</th>
+                <th>Spring Tool Suite4(STS) - Gradle</th>
             </tr>
             <tr>
-                <th>jQuery</th>
-                <th></th>
-            </tr>                       
+                <th>API</th>
+                <th>kakao Login, Daum 주소, Google Maps, PortOne</th>
+            </tr> 
+            <tr>
+                <th>Library</th>
+                <th>Thymeleaf, Handlebars, jQuery</th>
+            </tr>
+            <tr>
+                <th>ETC</th>
+                <th>Github, AWS EC2</th>
+            </tr>                                               
         </tbody>
     </table>
 </div>
 <br>
 
 
-<!--
-SpringBoot 2.7.10
-Apache Tomcat 9.0.73
-Mybatis 2.3.0
--->
+# 전체 기능
+### 1. 회원
+- 회원가입 - Daum 주소, 이메일 인증 
+- 로그인 - kakao 로그인, 아이디/비밀번호 찾기
+- 마이페이지 - 프로필 사진 업로드, 회원 정보 수정
+- 관리자 페이지 - 전체 회원 관리
+  
+### 2. 티켓/투어 상품
+- 상품 조회 - 정렬, 검색, 지역별 필터링
+- 상품 상세 보기
+- 상품 결제 - PortOne
+- 상품 리뷰 CRUD, 파일 업로드
+
+### 3. 동행 / 자유 게시판
+- 게시글, 댓글 CRUD
+- 정렬, 검색, 지역별/모집 상태별 필터링
+
+### 4. 1:1 실시간 채팅
+- 동행 게시글 작성자와 1:1 채팅
+  
+### 5. 공지사항 CRUD
+
+### 6. 위시리스트 CRUD
 
 
+<br>
+<br>
 
-# 주요 기능
-## 회원
+# 담당 기능
 
-- 회원 가입 - 아이디 유효성 검사
+## 회원 가입 
+- 아이디 유효성 검사
   
   ![join_id](https://github.com/kgee2/my-real-korea/assets/117699823/f1852ad4-080d-42f5-a7ac-fd3ef410b646)
 
-- 회원 가입 - 비밀번호 유효성 검사
+- 비밀번호 유효성 검사
   
     ![join_pw](https://github.com/kgee2/kgee2/assets/117699823/9813355e-2266-4970-83ff-e0323349170e)
 
-- 회원 가입 - 주소 찾기
+- 주소 찾기 (Daum 주소 API)
   
-  Daum 주소 API
-
     ![join_add](https://github.com/kgee2/kgee2/assets/117699823/5ad11e68-79c7-448f-9279-922b868dc481)
 
-- 로그인 - 이메일 인증
+<br>
+
+## 로그인 
+- 이메일 인증 (Java Mail API)
   
-  Java Mail API
     ![login_auth](https://github.com/kgee2/kgee2/assets/117699823/fd4617df-8ce7-4e51-8e32-d1bea2871e96)
 
-- 로그인 - 비밀번호 찾기
+- 비밀번호 찾기
 
     - 복호화가 불가능한 bCryptPasswordEncoder 때문에 원래의 비밀번호를 찾을 수 없기 때문에 임시 비밀번호 생성
     - 아이디와 이메일이 일치하는 회원의 이메일로 임시 비밀번호 발송
@@ -131,21 +148,25 @@ Mybatis 2.3.0
 
     ![find_pw](https://github.com/kgee2/kgee2/assets/117699823/5a07b824-4135-46ee-94c4-e1abe810cd8c)
 
-- 로그인 - 카카오 로그인
+- 카카오 로그인
 
-    카카오 로그인 API
-    - 카카오 계정으로 가입한 회원의 아이디는 K_ + 카카오 프로필에서 가져온 ID (10자리 숫자)의 조합
-    - 데이터베이스에 등록되어 있지 않은 아이디라면 회원 가입, 등록되어 있는 아이디라면 로그인
-    - 이메일 주소, 닉네임, 성별을 수집하여 회원 데이터베이스에 등록 
+  - 카카오 계정으로 가입한 회원의 아이디는 K_ + 카카오 프로필에서 가져온 ID (10자리 숫자)의 조합
+  - 데이터베이스에 등록되어 있지 않은 아이디라면 회원 가입, 등록되어 있는 아이디라면 로그인
+  - 이메일 주소, 닉네임, 성별을 수집하여 회원 데이터베이스에 등록 
   
   ![login_kakao](https://github.com/kgee2/kgee2/assets/117699823/c2d17beb-d68f-4187-b230-24e6f15cb71c) 
-    
-- 회원 정보 - 프로필 사진 업로드   
-    - MultipartResolver를 사용하여 파일 업로드
-    - UUID 를 사용하여 파일 이름 변경 후 directory에 저장 
+
+<br>
+   
+## 회원 정보 
+- 프로필 사진 업로드   
+  - MultipartResolver를 사용하여 파일 업로드
+  - UUID 를 사용하여 파일 이름 변경 후 directory에 저장 
      
    ![mypage_upload](https://github.com/kgee2/kgee2/assets/117699823/d4158a69-e572-4045-860f-8ae916781b70)
 
-- 회원 정보 - 관리자 페이지
-    ![mypage_admin](https://github.com/kgee2/kgee2/assets/117699823/45d31250-73bb-4c14-9bbc-2cbfa38c0029)
+- 관리자 페이지
+    - 전체 회원 관리
+ 
+  ![mypage_admin](https://github.com/kgee2/kgee2/assets/117699823/45d31250-73bb-4c14-9bbc-2cbfa38c0029)
 
